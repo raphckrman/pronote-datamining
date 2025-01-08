@@ -85935,12 +85935,14 @@ IE.fModule({
             },
           },
         };
-        const lAction = await this.applicationSco.getMessage().afficher({
-          type: Enumere_BoiteMessage_1.EGenreBoiteMessage.Confirmation,
-          message: H.join(''),
-          controleur: lControleur,
-          width: 430,
-        });
+        const lAction = await this.applicationSco
+          .getMessage()
+          .afficher({
+            type: Enumere_BoiteMessage_1.EGenreBoiteMessage.Confirmation,
+            message: H.join(''),
+            controleur: lControleur,
+            width: 430,
+          });
         if (lAction === Enumere_Action_1.EGenreAction.Valider) {
           return {
             commande: 'purger',
@@ -86346,12 +86348,14 @@ IE.fModule({
             GEtatUtilisateur.getUtilisateur(),
           )
         ) {
-          const lGenreAction = await this.applicationSco.getMessage().afficher({
-            type: Enumere_BoiteMessage_1.EGenreBoiteMessage.Confirmation,
-            message: ObjetTraduction_1.GTraductions.getValeur(
-              'Messagerie.ConfirmationAuteurDansDestinataires',
-            ),
-          });
+          const lGenreAction = await this.applicationSco
+            .getMessage()
+            .afficher({
+              type: Enumere_BoiteMessage_1.EGenreBoiteMessage.Confirmation,
+              message: ObjetTraduction_1.GTraductions.getValeur(
+                'Messagerie.ConfirmationAuteurDansDestinataires',
+              ),
+            });
           if (lGenreAction === Enumere_Action_1.EGenreAction.NePasValider) {
             aMessage.listeDestinataires.remove(
               aMessage.listeDestinataires.getIndiceParElement(

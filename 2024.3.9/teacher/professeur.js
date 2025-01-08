@@ -48977,11 +48977,13 @@ IE.fModule({
       }
       eventCreation() {
         if (this.applicationSco.getModeExclusif()) {
-          return this.applicationSco.getMessage().afficher({
-            message: ObjetTraduction_1.GTraductions.getValeur(
-              'fenetreRecupIdMDP.RecupModeConsultation',
-            ),
-          });
+          return this.applicationSco
+            .getMessage()
+            .afficher({
+              message: ObjetTraduction_1.GTraductions.getValeur(
+                'fenetreRecupIdMDP.RecupModeConsultation',
+              ),
+            });
         }
         const lInstance = ObjetFenetre_1.ObjetFenetre.creerInstanceFenetre(
           MultiObjetFenetreRecupIdMDP.ObjetFenetreRecupIdMDP,
@@ -49006,11 +49008,13 @@ IE.fModule({
       }
       evenementRecupIdMDP() {
         if (this.applicationSco.getModeExclusif()) {
-          return this.applicationSco.getMessage().afficher({
-            message: ObjetTraduction_1.GTraductions.getValeur(
-              'fenetreRecupIdMDP.RecupModeConsultation',
-            ),
-          });
+          return this.applicationSco
+            .getMessage()
+            .afficher({
+              message: ObjetTraduction_1.GTraductions.getValeur(
+                'fenetreRecupIdMDP.RecupModeConsultation',
+              ),
+            });
         }
         this.getInstance(this.identFenetreRecupIdMDP).afficher();
       }
