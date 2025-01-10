@@ -2442,6 +2442,12 @@
       a('Onglet.LibelleLong', "Appels à l'internat");
       a('Onglet.LibelleLong', 'Remplacements');
       a(
+        'Demo.Message',
+        "Dans cette version de démonstration, aucune saisie n'est prise en compte.",
+      );
+      a('Demo.Identifiant', 'demonstration2');
+      a('Demo.MotDePasse', 'pronotevs');
+      a(
         'Louvre.Lien',
         "En savoir plus et découvrir l'exposition %s de la Petite Galerie du Louvre",
       );
