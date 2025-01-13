@@ -1,12 +1,12 @@
-import { commitAndPush } from "./utils/commit.js";
-import { beautifyDir } from "./utils/format.js";
-import { getAccompagnyingFiles } from "./utils/getAccompanying.js";
-import { getCommonFiles } from "./utils/getCommon.js";
-import { getDirectionFiles } from "./utils/getDirection.js";
-import { getParentsFiles } from "./utils/getParents.js";
-import { getStudentFiles } from "./utils/getStudent.js";
-import { getTeacherFiles } from "./utils/getTeacher.js";
-import { getVieScoFiles } from "./utils/getVieSco.js";
+const { commitAndPush } = require("./utils/commit.js");
+const { beautifyDir } = require("./utils/format.js");
+const { getAccompagnyingFiles } = require("./utils/getAccompanying.js");
+const { getCommonFiles } = require("./utils/getCommon.js");
+const { getDirectionFiles } = require("./utils/getDirection.js");
+const { getParentsFiles } = require("./utils/getParents.js");
+const { getStudentFiles } = require("./utils/getStudent.js");
+const { getTeacherFiles } = require("./utils/getTeacher.js");
+const { getVieScoFiles } = require("./utils/getVieSco.js");
 
 async function main() {
     const PNVersion = await getCommonFiles()
