@@ -1,5 +1,5 @@
-import simpleGit from "simple-git"
-import { format } from "date-fns"
+const simpleGit = require('simple-git');
+const { format } = require('date-fns');
 
 const PAT = process.env.PAT;
 

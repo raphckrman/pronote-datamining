@@ -1,7 +1,6 @@
-import { base } from "./getCommon.js";
-import { extractScriptLinks } from "./extractLinks.js"
-import { downloadFile } from "./download.js";
-import { commitAndPush } from "./commit.js";
+const { base } = require("./getCommon.js");
+const { extractScriptLinks } = require("./extractLinks.js");
+const { downloadFile } = require("./download.js");
 
 export async function getStudentFiles(PNVersion) {
     const instanceRequest = await fetch(base + "pronote/eleve.html", {

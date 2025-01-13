@@ -1,6 +1,6 @@
-import prettier from "prettier";
-import * as fs from "fs";
-import * as path from "path";
+import prettier from 'prettier';
+const fs = require('fs');
+const path = require('path');
 
 export function beautifyCode(inputCode) {
     try {

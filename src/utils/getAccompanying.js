@@ -1,6 +1,6 @@
-import { base } from "./getCommon.js";
-import { extractScriptLinks } from "./extractLinks.js"
-import { downloadFile } from "./download.js";
+const { base } = require("./getCommon.js");
+const { extractScriptLinks } = require("./extractLinks.js");
+const { downloadFile } = require("./download.js");
 
 export async function getAccompagnyingFiles(PNVersion) {
     const instanceRequest = await fetch(base + "pronote/accompagnant.html", {

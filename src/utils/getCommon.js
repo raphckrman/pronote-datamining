@@ -1,5 +1,5 @@
-import { extractScriptLinks } from "./extractLinks.js"
-import { downloadFile } from "./download.js";
+const { extractScriptLinks } = require("./extractLinks.js");
+const { downloadFile } = require("./download.js");
 
 const INSTANCE = process.env.INSTANCE;
 
