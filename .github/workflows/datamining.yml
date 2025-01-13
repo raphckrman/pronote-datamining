@@ -36,11 +36,13 @@ jobs:
 
       - name: Set up Git
         run: |
+          cd src/pronote-datamining
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Get current commit informations
         run: |
+          cd src/pronote-datamining
           COMMIT_ID=$(git rev-parse --short HEAD)
           DATE=$(date '+%d %B %Y')  
           echo "COMMIT_ID=$COMMIT_ID" >> $GITHUB_ENV
