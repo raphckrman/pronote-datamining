@@ -50,4 +50,4 @@ jobs:
         run: |
           git add ./src/pronote-datamining
           git commit -m "${{ env.DATE }} - Build ${{ env.COMMIT_ID }}"
-          git push origin main
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
