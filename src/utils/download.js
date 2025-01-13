@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-export async function downloadFile(url, outputDir) {
+async function downloadFile(url, outputDir) {
     try {
         const fileName = path.basename(url);
         const outputPath = path.join(outputDir, fileName);
@@ -26,3 +26,5 @@ export async function downloadFile(url, outputDir) {
         console.error(error.message);
     }
 }
+
+module.exports = { downloadFile };

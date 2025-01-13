@@ -1,4 +1,4 @@
-export function extractScriptLinks(content) {
+function extractScriptLinks(content) {
     const regex = /<script\s+src="([^"]+)"/g;
     const links = [];
     let match;
@@ -9,3 +9,5 @@ export function extractScriptLinks(content) {
 
     return links;
 }
+
+module.exports = { extractScriptLinks };

@@ -2,7 +2,7 @@ import prettier from 'prettier';
 const fs = require('fs');
 const path = require('path');
 
-export function beautifyCode(inputCode) {
+function beautifyCode(inputCode) {
     try {
       const formattedCode = prettier.format(inputCode, {
         semi: true,
@@ -17,7 +17,7 @@ export function beautifyCode(inputCode) {
     }
   }
 
-  export async function beautifyFile(filePath) {
+async function beautifyFile(filePath) {
     try {
       const inputCode = fs.readFileSync(filePath, 'utf-8');
       
@@ -29,7 +29,7 @@ export function beautifyCode(inputCode) {
     }
 }
 
-export async function beautifyDir(dirPath) {
+async function beautifyDir(dirPath) {
   const directories = [dirPath];
   const filesToBeautify = [];
 
@@ -54,3 +54,5 @@ export async function beautifyDir(dirPath) {
     await beautifyFile(file);
   }
 }
+
+module.exports = { beautifyCode, beautifyFile, beautifyDir };
