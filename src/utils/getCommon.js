@@ -17,7 +17,7 @@ async function getCommonFiles() {
     const downloadedFiles = [];
 
     for (const link of scripts) {
-        const filePath = await downloadFile(base + "pronote/" + link, "./pronote-datamining/"+ PNVersion + "/common/");
+        const filePath = await downloadFile(base + "pronote/" + link, "../"+ PNVersion + "/common/");
         if (filePath) {
             downloadedFiles.push(filePath);
         }

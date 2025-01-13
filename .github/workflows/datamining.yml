@@ -24,10 +24,6 @@ jobs:
         working-directory: ./src
         run: npm install
 
-      - name: Clone pronote-datamining into src
-        run: |
-          git clone https://github.com/raphckrman/pronote-datamining.git src/pronote-datamining
-
       - name: Run Datamining Script
         working-directory: ./src
         env:
@@ -36,13 +32,11 @@ jobs:
 
       - name: Set up Git
         run: |
-          cd src/pronote-datamining
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Get current commit informations
         run: |
-          cd src/pronote-datamining
           COMMIT_ID=$(git rev-parse --short HEAD)
           DATE=$(date '+%d %B %Y')  
           echo "COMMIT_ID=$COMMIT_ID" >> $GITHUB_ENV
@@ -50,7 +44,6 @@ jobs:
 
       - name: Commit & Push Changes
         run: |
-          cd src/pronote-datamining
           git add .
           if ! git diff-index --quiet HEAD; then
             git commit -m "${{ env.DATE }} - Build ${{ env.COMMIT_ID }}"

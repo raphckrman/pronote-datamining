@@ -13,7 +13,7 @@ async function getStudentFiles(PNVersion) {
     const downloadedFiles = [];
 
     for (const link of scripts) {
-        const filePath = await downloadFile(base + "pronote/" + link, "./pronote-datamining/"+ PNVersion + "/student/");
+        const filePath = await downloadFile(base + "pronote/" + link, "../"+ PNVersion + "/student/");
         if (filePath) {
             downloadedFiles.push(filePath);
         }

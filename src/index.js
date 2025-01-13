@@ -17,7 +17,7 @@ async function main() {
     await getAccompagnyingFiles(PNVersion)
     await getStudentFiles(PNVersion)
 
-    await beautifyDir("./pronote-datamining/" + PNVersion)
+    await beautifyDir("../" + PNVersion)
 }
 
 main()

@@ -13,7 +13,7 @@ async function getParentsFiles(PNVersion) {
     const downloadedFiles = [];
 
     for (const link of scripts) {
-        const filePath = await downloadFile(base + "pronote/" + link, "./pronote-datamining/"+ PNVersion + "/parent/");
+        const filePath = await downloadFile(base + "pronote/" + link, "../"+ PNVersion + "/parent/");
         if (filePath) {
             downloadedFiles.push(filePath);
         }

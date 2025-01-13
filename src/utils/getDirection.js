@@ -13,7 +13,7 @@ async function getDirectionFiles(PNVersion) {
     const downloadedFiles = [];
 
     for (const link of scripts) {
-        const filePath = await downloadFile(base + "pronote/" + link, "./pronote-datamining/"+ PNVersion + "/direction/");
+        const filePath = await downloadFile(base + "pronote/" + link, "../"+ PNVersion + "/direction/");
         if (filePath) {
             downloadedFiles.push(filePath);
         }

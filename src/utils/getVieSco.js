@@ -13,7 +13,7 @@ async function getVieScoFiles(PNVersion) {
     const downloadedFiles = [];
 
     for (const link of scripts) {
-        const filePath = await downloadFile(base + "pronote/" + link, "./pronote-datamining/"+ PNVersion + "/viesco/");
+        const filePath = await downloadFile(base + "pronote/" + link, "../"+ PNVersion + "/viesco/");
         if (filePath) {
             downloadedFiles.push(filePath);
         }
