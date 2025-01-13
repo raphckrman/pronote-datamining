@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "data-fns": "^1.1.0",
+    "date-fns": "^4.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "prettier": "^3.4.2",
+    "simple-git": "^3.27.0"
+  }
+}
