@@ -52,5 +52,7 @@ jobs:
         run: |
           cd src/pronote-datamining
           git add .
-          git commit -m "${{ env.DATE }} - Build ${{ env.COMMIT_ID }}"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "${{ env.DATE }} - Build ${{ env.COMMIT_ID }}"
+            git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+          fi
