@@ -1,4 +1,3 @@
-const { commitAndPush } = require("./utils/commit.js");
 const { beautifyDir } = require("./utils/format.js");
 const { getAccompagnyingFiles } = require("./utils/getAccompanying.js");
 const { getCommonFiles } = require("./utils/getCommon.js");
@@ -19,7 +18,6 @@ async function main() {
     await getStudentFiles(PNVersion)
 
     await beautifyDir("./pronote-datamining/" + PNVersion)
-    await commitAndPush("./pronote-datamining", PNVersion)
 }
 
 main()

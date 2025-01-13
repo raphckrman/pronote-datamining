@@ -31,6 +31,23 @@ jobs:
       - name: Run Datamining Script
         working-directory: ./src
         env:
-          PAT: ${{ secrets.PAT }}
           INSTANCE: ${{ secrets.INSTANCE }}
         run: node index.js
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Get current commit informations
+        run: |
+          COMMIT_ID=$(git rev-parse --short HEAD)
+          DATE=$(date '+%d %B %Y')  
+          echo "COMMIT_ID=$COMMIT_ID" >> $GITHUB_ENV
+          echo "DATE=$DATE" >> $GITHUB_ENV
+
+      - name: Commit & Push Changes
+        run: |
+          git add ./src/pronote-datamining
+          git commit -m "${{ env.DATE }} - Build ${{ env.COMMIT_ID }}"
+          git push origin main
