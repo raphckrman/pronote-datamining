@@ -214,22 +214,46 @@
         {
           //Semaine 10
 
-          srcImage: 'ressources/neutre.png',
-          urlImageFond: 'ressources/neutre-bkg.png',
+          srcImage: 'ressources/superflu-11.svg',
+          urlImageSuite: 'ressources/superflu-11-suite.svg',
+          urlImageFond: 'ressources/bkg-bleu.svg',
+          widthImageSuite: 1442,
+          heightImageSuite: 600,
           couleurConnexion: '#ffffff',
           classImageFond: 'Repeat',
-          avecLien: false,
-          avecLienSuite: false,
+          lienLogo: 'https://www.projet-voltaire.fr/',
+          styleLogo:
+            'background-image: url(ressources/logo-projet-voltaire.png);width: 100px;height: 85px;',
+          suiviLogo: 'https://www.index-education.com/swie/tl.php?ln=volt_logo',
+          avecLienSuite: true,
+          texteLienSuite:
+            'Avec le Projet Voltaire et PRONOTE, découvrez comment améliorer votre expression orale.',
+          lienSuite:
+            'https://www.projet-voltaire.fr/pronote/?utm_source=pronote&utm_medium=referral_partner&utm_campaign=pronote_partenariat_pronote_2024',
+          suiviLienSuite:
+            'https://www.index-education.com/swie/tl.php?ln=volt24_27',
         },
         {
           //Semaine 11
 
-          srcImage: 'ressources/neutre.png',
-          urlImageFond: 'ressources/neutre-bkg.png',
+          srcImage: 'ressources/anglicisme-10.svg',
+          urlImageSuite: 'ressources/anglicisme-10-suite.svg',
+          urlImageFond: 'ressources/bkg-orange.svg',
+          widthImageSuite: 1442,
+          heightImageSuite: 600,
           couleurConnexion: '#ffffff',
           classImageFond: 'Repeat',
-          avecLien: false,
-          avecLienSuite: false,
+          lienLogo: 'https://www.projet-voltaire.fr/',
+          styleLogo:
+            'background-image: url(ressources/logo-projet-voltaire.png);width: 100px;height: 85px;',
+          suiviLogo: 'https://www.index-education.com/swie/tl.php?ln=volt_logo',
+          avecLienSuite: true,
+          texteLienSuite:
+            'Avec le Projet Voltaire et PRONOTE, découvrez comment améliorer votre expression orale.',
+          lienSuite:
+            'https://www.projet-voltaire.fr/pronote/?utm_source=pronote&utm_medium=referral_partner&utm_campaign=pronote_partenariat_pronote_2024',
+          suiviLienSuite:
+            'https://www.index-education.com/swie/tl.php?ln=volt24_28',
         },
         {
           //Semaine 12
@@ -644,24 +668,12 @@
         {
           //Semaine 53
 
-          srcImage: 'ressources/superflu-10.svg',
-          urlImageSuite: 'ressources/superflu-10-suite.svg',
-          urlImageFond: 'ressources/bkg-orange.svg',
-          widthImageSuite: 1442,
-          heightImageSuite: 600,
+          srcImage: 'ressources/neutre.png',
+          urlImageFond: 'ressources/neutre-bkg.png',
           couleurConnexion: '#ffffff',
           classImageFond: 'Repeat',
-          lienLogo: 'https://www.projet-voltaire.fr/',
-          styleLogo:
-            'background-image: url(ressources/logo-projet-voltaire.png);width: 100px;height: 85px;',
-          suiviLogo: 'https://www.index-education.com/swie/tl.php?ln=volt_logo',
-          avecLienSuite: true,
-          texteLienSuite:
-            'Avec le Projet Voltaire et PRONOTE, découvrez comment améliorer votre expression orale.',
-          lienSuite:
-            'https://www.projet-voltaire.fr/pronote/?utm_source=pronote&utm_medium=referral_partner&utm_campaign=pronote_partenariat_pronote_2024',
-          suiviLienSuite:
-            'https://www.index-education.com/swie/tl.php?ln=volt24_19',
+          avecLien: false,
+          avecLienSuite: false,
         },
       ];
 
