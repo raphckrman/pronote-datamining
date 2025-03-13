@@ -7,7 +7,16 @@
       var ObjetImageConnexion = require('ObjetImageConnexion.js');
       if (!ObjetImageConnexion) ObjetImageConnexion = lObjetImageConnexion;
 
-      var imagesExtra = {};
+      var imagesExtra = {
+        '2-14': {
+          //14/3/2025
+          srcImage: 'ressources/pi-day-25-bis.svg',
+          urlImageFond: 'ressources/bkg-pi-day-25.jpg',
+          couleurConnexion: '#ffffff',
+          classImageFond: 'Repeat',
+          avecLien: false,
+        },
+      };
       ObjetImageConnexion.setDefinitionImagesExtra(imagesExtra);
 
       var lImages = [];
