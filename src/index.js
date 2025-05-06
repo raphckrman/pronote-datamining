@@ -1,3 +1,4 @@
+const { splitDir, loadTranslations } = require("./utils/fModuleSplitter.js");
 const { beautifyDir } = require("./utils/format.js");
 const { getAccompagnyingFiles } = require("./utils/getAccompanying.js");
 const { getCommonFiles } = require("./utils/getCommon.js");
@@ -18,6 +19,7 @@ async function main() {
     await getStudentFiles(PNVersion)
 
     await beautifyDir("../" + PNVersion)
+    await splitDir("../" + PNVersion)
 }
 
 main()
