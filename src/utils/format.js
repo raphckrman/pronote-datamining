@@ -50,6 +50,10 @@ async function beautifyDir(dirPath) {
   }
 
   for (const file of filesToBeautify) {
+    if (file.includes("sp_")) {
+      continue;
+    }
+
     console.log("Beautifying " + file);
     await beautifyFile(file);
   }

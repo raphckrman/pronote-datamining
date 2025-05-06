@@ -108,7 +108,7 @@ async function splitFile(filePath) {
           } else {
           }
           
-          const outputPath = path.join(path.dirname(filePath), fileName);
+          const outputPath = path.join(path.dirname(filePath), "sp_" + fileName);
           
           if (translated !== fileContent) {
           } else {
@@ -169,6 +169,10 @@ async function splitDir(dirPath) {
   }
 
   for (const file of filesToSplit) {
+    if (file.includes("sp_")) {
+      continue;
+    }
+    console.log("Splitting " + file);
     await splitFile(file);
   }
 }
