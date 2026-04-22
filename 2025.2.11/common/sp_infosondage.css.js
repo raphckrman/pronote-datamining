@@ -1,0 +1,50 @@
+IE.fModule({
+  f: function (exports, require, module, global) {
+    'use strict';
+    Object.defineProperty(exports, '__esModule', { value: true });
+    exports.StylesInfoSondage = void 0;
+    require('InfoSondage.css');
+    exports.StylesInfoSondage = {
+      InfoSond_Question: 'InfoSond_Question',
+      InfoSond_NbChoixLimite: 'InfoSond_NbChoixLimite',
+      Actu_InfoSondage: 'Actu_InfoSondage',
+      InfoSond_InfoCoche: 'InfoSond_InfoCoche',
+      Actu_Question: 'Actu_Question',
+      Actu_EtatSondage: 'Actu_EtatSondage',
+      Actu_EtatSondageRepondre: 'Actu_EtatSondageRepondre',
+      Actu_EtatSondageVoirReponse: 'Actu_EtatSondageVoirReponse',
+      Actu_BtnValider: 'Actu_BtnValider',
+      Actu_AR: 'Actu_AR',
+      Actu_InfoCoche: 'Actu_InfoCoche',
+      Actu_Destinataire: 'Actu_Destinataire',
+      Actu_DestPos1: 'Actu_DestPos1',
+      Actu_DestPosN: 'Actu_DestPosN',
+      Actu_FondDest: 'Actu_FondDest',
+      Actu_Descriptif: 'Actu_Descriptif',
+      Actu_DatePub: 'Actu_DatePub',
+      avecShadow: 'avecShadow',
+      infoSondageMenuCtxMixte: 'info-sondage-menuCtxMixte',
+      infoSondageContent: 'info-sondage-content',
+      avecSuivant: 'avecSuivant',
+      infoAR: 'info-AR',
+      titreInfoSondage: 'titre-info-sondage',
+      iconTitre: 'icon-titre',
+      publicationInfoSondage: 'publication-info-sondage',
+      publicInfoSondage: 'public-info-sondage',
+      partageInfoSondage: 'partage-info-sondage',
+      zoneTitreInfoSondage: 'zoneTitre-info-sondage',
+      zoneTitreIntegralInfoSondage: 'zoneTitreIntegral-info-sondage',
+      InterfaceConsultInfoSondage: 'InterfaceConsultInfoSondage',
+      zoneConsult_scroll: 'zoneConsult_scroll',
+      zoneTotal: 'zoneTotal',
+      sv_speech: 'sv_speech',
+      zoneDescriptif: 'zoneDescriptif',
+      zoneDate: 'zoneDate',
+      zoneBtnsAction: 'zoneBtnsAction',
+      item: 'item',
+      mixIcon_fermeture_widget: 'mix-icon_fermeture_widget',
+      iSmall: 'i-small',
+    };
+  },
+  fn: 'infosondage.css.js',
+});
