@@ -1,0 +1,52 @@
+IE.fModule({
+  f: function (exports, require, module, global) {
+    'use strict';
+    Object.defineProperty(exports, '__esModule', { value: true });
+    exports.SIEHtmlCheckboxRadio = void 0;
+    require('./IEHtml.CheckboxRadio.scss');
+    exports.SIEHtmlCheckboxRadio = {
+      ieswitch: 'ieswitch',
+      iecb: 'iecb',
+      EspaceIndex: 'EspaceIndex',
+      iconeSvg: 'icone-svg',
+      off: 'off',
+      on: 'on',
+      iconeSvgCase_indetermine: 'icone-svg-case_indetermine',
+      iconeSvgCase_on: 'icone-svg-case_on',
+      lever: 'lever',
+      case_indeterminate: 'case_indeterminate',
+      asChips: 'as-chips',
+      noLabel: 'no-label',
+      isDisabled: 'is-disabled',
+      isChecked: 'is-checked',
+      blinkAnimation: 'blink-animation',
+      onAir: 'on-air',
+      voeux: 'voeux',
+      indisponibilites: 'indisponibilites',
+      neutreFoncee: 'neutre-foncee',
+      avecCouleurIsDisabled: 'avecCouleur-is-disabled',
+      marron: 'marron',
+      vert: 'vert',
+      rouge: 'rouge',
+      lightJaune: 'light-jaune',
+      iconic: 'iconic',
+      EspaceMobileIndex: 'EspaceMobileIndex',
+      switch: 'switch',
+      lblRight: 'lbl-right',
+      ApplicationMobileIndex: 'ApplicationMobileIndex',
+      onWidgets: 'on-widgets',
+      tabbed: 'tabbed',
+      showPass: 'show-pass',
+      iecbTexteDisabled: 'iecb-texte-disabled',
+      coloredLabel: 'colored-label',
+      ThemeCatCommunication: 'ThemeCat-communication',
+      ThemeCatPedagogie: 'ThemeCat-pedagogie',
+      ThemeCatViescolaire: 'ThemeCat-viescolaire',
+      ThemeCatResultat: 'ThemeCat-resultat',
+      ThemeCatEdt: 'ThemeCat-edt',
+      longText: 'long-text',
+      RadioChipsGroup: 'RadioChipsGroup',
+    };
+  },
+  fn: 'iehtml.checkboxradio.css.js',
+});
