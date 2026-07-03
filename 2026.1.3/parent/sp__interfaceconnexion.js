@@ -109,10 +109,10 @@ IE.fModule({
         }
         if ((0, AccessApp_1.getApp)().getDemo()) {
           this.moteurConnexion.setLogin(
-            ObjetTraduction_1.GTraductions.getValeur('Demo.Identifiant'),
+            'demonstration',
           );
           this.moteurConnexion.setMotDePasse(
-            ObjetTraduction_1.GTraductions.getValeur('Demo.MotDePasse'),
+            'pronotevs',
           );
           $('#' + this.id.identification).attr('readonly', 'true');
           $('#' + this.id.motDePasse).attr('readonly', 'true');
