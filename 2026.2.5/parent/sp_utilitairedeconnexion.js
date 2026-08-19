@@ -1,0 +1,93 @@
+IE.fModule({
+  f: function (exports, require, module, global) {
+    'use strict';
+    Object.defineProperty(exports, '__esModule', { value: true });
+    exports.UtilitaireDeconnexion = void 0;
+    const Invocateur_1 = require('@librairies/script/Divers/Invocateur');
+    const ObjetRequeteSaisieDeconnexion_1 = require('@cp/Produit/Script/ObjetRequeteSaisieDeconnexion');
+    const Enumere_BoiteMessage_1 = require('@cp/Produit/Script/Enumere/Enumere_BoiteMessage');
+    const ObjetTraduction_1 = require('@cp/script/ObjetTraduction');
+    const Enumere_Action_1 = require('@cp/Produit/Script/Enumere/Enumere_Action');
+    const ControleSaisieEvenement_1 = require('@cp/script/ControleSaisieEvenement');
+    const Enumere_MessageHtml_1 = require('@cp/script/Enumere/Enumere_MessageHtml');
+    const Enumere_MessageHtml_2 = require('@cp/script/Enumere/Enumere_MessageHtml');
+    const AccessApp_1 = require('@cp/script/AccessApp');
+    exports.UtilitaireDeconnexion = {
+      async confirmationDeconnexion(aSansPageDeconnexion) {
+        return (0, AccessApp_1.getApp)()
+          .getMessage()
+          .afficher({
+            type: Enumere_BoiteMessage_1.EGenreBoiteMessage.Confirmation,
+            message: 'Confirmez-vous la déconnexion ?',
+          })
+          .then((aGenreBouton) => {
+            if (aGenreBouton === Enumere_Action_1.EGenreAction.Valider) {
+              return new Promise((aResolve) => {
+                (0, ControleSaisieEvenement_1.ControleSaisieEvenement)(() => {
+                  exports.UtilitaireDeconnexion.deconnexion(
+                    aSansPageDeconnexion,
+                  );
+                  aResolve(true);
+                });
+              });
+            } else {
+              return false;
+            }
+          });
+      },
+      async deconnexion(aSansPageDeconnexion) {
+        Invocateur_1.Invocateur.desabonner(
+          Invocateur_1.ObjetInvocateur.events.autorisationRechargementPage,
+        );
+        if (GEtatUtilisateur.reset) {
+          GEtatUtilisateur.reset();
+        }
+        return exports.UtilitaireDeconnexion.requeteDeconnexion().then(() => {
+          var _a;
+          const lApplicationProduit = (0, AccessApp_1.getApp)();
+          if (aSansPageDeconnexion) {
+            window.location.reload();
+          } else if (lApplicationProduit.urlLogout) {
+            window.location.href = lApplicationProduit.urlLogout;
+          } else if (
+            (_a = lApplicationProduit.acces) === null || _a === void 0
+              ? void 0
+              : _a.estConnexionCAS()
+          ) {
+            window.location.href =
+              Enumere_MessageHtml_2.EGenreMessageHtmlUtil.construireUrl(
+                IE.estMobile
+                  ? Enumere_MessageHtml_1.EGenreMessageHtml
+                      .deconnexionENT_Mobile
+                  : Enumere_MessageHtml_1.EGenreMessageHtml.deconnexionENT,
+              );
+          } else {
+            lApplicationProduit.finSession({
+              constructionPage: true,
+              statut: 0,
+              jsonErreur: { Titre: '', Message: '' },
+            });
+          }
+        });
+      },
+      async deconnexionEchecChargement() {
+        return exports.UtilitaireDeconnexion.requeteDeconnexion().then(() => {
+          (0, AccessApp_1.getApp)().finSession({
+            constructionPage: true,
+            statut: 0,
+            jsonErreur: {
+              Titre: '',
+              Message: 'Échec lors du chargement de la page',
+            },
+          });
+        });
+      },
+      async requeteDeconnexion() {
+        return new ObjetRequeteSaisieDeconnexion_1.ObjetRequeteSaisieDeconnexion(
+          {},
+        ).lancerRequete();
+      },
+    };
+  },
+  fn: 'utilitairedeconnexion.js',
+});
